@@ -12,6 +12,6 @@ class Works extends Controller
       $works = Work::orderBy('created_at', 'desc')
                                           ->take(6)
                                           ->get();
-      return view('homepage.index', compact('works'));
+      return view('works.index', compact('works'));
     }
 }

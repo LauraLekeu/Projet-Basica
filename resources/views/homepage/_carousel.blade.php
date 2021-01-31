@@ -13,7 +13,7 @@
     <div class="carousel-inner">
 
       @foreach ($works as $work)
-          <div class="item {{ $work->inSlider == 3 ? 'active' : "" }}" style="background-image: url('{{asset('assets/img/portfolio/' . $work->image )}}')">
+          <div class="item {{ $loop->index == 0 ? 'active' : "" }}" style="background-image: url('{{asset('assets/img/portfolio/' . $work->image )}}')">
             <div class="container">
               <div class="row">
                 <div class="col-sm-12">

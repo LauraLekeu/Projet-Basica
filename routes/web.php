@@ -21,7 +21,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 View::composer('homepage._carousel', function($view){
-  $view->with('works', App\Models\Work::orderBy('inSlider', 'desc')
+  $view->with('works', App\Models\Work::where('inSlider', 1)
+                                      ->orderBy('created_at', 'desc')
                                       ->take(3)
                                       ->get());
 });
@@ -46,11 +47,19 @@ View::composer('homepage._lastest_blog', function($view){
 | ROUTES
 |--------------------------------------------------------------------------
 */
+use App\Http\Controllers\Works;
 
-// // ROUTE PAR DEFAUT
-// // PATTERN: /
-// // CTRL: /
-// // ACTION: /
+
+// ROUTE DES WORKS
+// PATTERN: /works
+// CTRL: Works
+// ACTION: index
+Route::get('/works', [Works::class, 'index'])->name('works');
+
+// ROUTE PAR DEFAUT
+// PATTERN: /
+// CTRL: /
+// ACTION: /
 Route::get('/', function () {
     return view('homepage.index');
 })->name('home');
