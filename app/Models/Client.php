@@ -11,6 +11,6 @@ class Client extends Model
 
     // Getter works du client
     public function works(){
-      return $this->hasMany('App\Models\Work')
+      return $this->hasMany('App\Models\Work');
     }
 }

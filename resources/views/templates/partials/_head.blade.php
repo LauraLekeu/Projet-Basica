@@ -8,7 +8,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<title>Basica - </title>
+<title>Basica - @yield('title') </title>
 
 <!-- Bootstrap Core CSS -->
 <link href="{{ asset('assets/css/bootstrap.css')}}" rel="stylesheet">
