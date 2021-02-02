@@ -29,7 +29,21 @@ View::composer('homepage._lastest_blog', function($view){
 
 /*
 |--------------------------------------------------------------------------
-| ROUTES
+| ROUTES DES POSTS
+|--------------------------------------------------------------------------
+*/
+use App\Http\Controllers\Posts;
+
+// ROUTE DES POSTS
+// PATTERN: /works
+// CTRL: Works
+// ACTION: index
+Route::get('/posts', [Posts::class, 'index'])->name('posts');
+
+
+/*
+|--------------------------------------------------------------------------
+| ROUTES DES WORKS
 |--------------------------------------------------------------------------
 */
 use App\Http\Controllers\Works;

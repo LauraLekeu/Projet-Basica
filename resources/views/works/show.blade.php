@@ -86,7 +86,7 @@
           @include('works._liste_show', ['works' => \App\Models\Work::whereHas('tags', function ($q) use ($work) {
                                                                                     return $q->whereIn('name', $work->tags->pluck('name'));
                                                                                   })
-                                                               ->orderBy('created_at', 'desc')->take(4)->get()])
+                                                                    ->orderBy('created_at', 'desc')->take(4)->get()])
         </ul>
       </div>
     </div>
