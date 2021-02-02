@@ -11,7 +11,7 @@
 @section('content')
 
   {{-- 3 meilleurs projets (inSlider) --}}
-  @include('homepage._carousel')
+  @include('homepage._carousel', ['works' => \App\Models\Work::where('inSlider', 1)->orderBy('created_at', 'desc')->take(3)  ->get()])
 
 
   <div class="section section-white">
@@ -22,7 +22,7 @@
         </div>
         <ul class="grid cs-style-3">
           {{-- liste des 6 derniers projets --}}
-          @include('works._liste')
+          @include('works._liste', ['works' => \App\Models\Work::orderBy('created_at', 'desc')->take(6)->get()])
         </ul>
       </div>
     </div>

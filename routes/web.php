@@ -20,21 +20,6 @@ use Illuminate\Support\Facades\Route;
 |--------------------------------------------------------------------------
 */
 
-View::composer('homepage._carousel', function($view){
-  $view->with('works', App\Models\Work::where('inSlider', 1)
-                                      ->orderBy('created_at', 'desc')
-                                      ->take(3)
-                                      ->get());
-});
-
-
-View::composer('works._liste', function($view){
-  $view->with('works', App\Models\Work::orderBy('created_at', 'desc')
-                                      ->take(6)
-                                      ->get());
-});
-
-
 View::composer('homepage._lastest_blog', function($view){
   $view->with('posts', App\Models\Post::orderBy('created_at', 'desc')
                                       ->take(3)
@@ -56,6 +41,12 @@ use App\Http\Controllers\Works;
 // ACTION: index
 Route::get('/works', [Works::class, 'index'])->name('works');
 
+// ROUTE AJAX MORE WORKS
+// PATTERN: /works/ajax/more
+// CTRL: Works
+// ACTION: index
+Route::get('/works/ajax/more', [Works::class, 'more'])->name('works.ajax.more');
+
 // ROUTE PAR DEFAUT
 // PATTERN: /
 // CTRL: /
@@ -64,6 +55,13 @@ Route::get('/', function () {
     return view('homepage.index');
 })->name('home');
 
+
+
+/*
+|--------------------------------------------------------------------------
+| ROUTES BACKOFFICE
+|--------------------------------------------------------------------------
+*/
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');

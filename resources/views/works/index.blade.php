@@ -8,6 +8,10 @@
   Works
 @endsection
 
+@section('scripts')
+  <script src={{ asset('assets/js/works/index.js') }}></script>
+@endsection
+
 @section('content')
 
   <div class="section section-breadcrumbs">
@@ -33,16 +37,16 @@
       </div>
     </div>
   </div>
-  
+
   <div class="section">
     <div class="container">
       <div class="row">
-        <ul class="grid cs-style-2">
+        <ul id="works_list" class="grid cs-style-2">
           @include('works._liste')
         </ul>
       </div>
       <ul class="pager">
-        <li><a href="#">More works</a></li>
+        <li><a href="#" id="works-index-more" data-url="{{ route('works.ajax.more') }}" data-limit="6">More works</a></li>
       </ul>
     </div>
   </div>

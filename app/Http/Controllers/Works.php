@@ -14,4 +14,15 @@ class Works extends Controller
                                           ->get();
       return view('works.index', compact('works'));
     }
+
+    public function more(Request $request) {
+        $limit = (isset($request->limit)) ? $request->limit : 6;
+
+        $works = Work::orderBy('created_at', 'desc')
+                     ->take($limit)
+                     ->offset($request->offset)
+                     ->get();
+
+        return view('works._liste', compact('works'));
+      }
 }
