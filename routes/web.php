@@ -34,6 +34,13 @@ View::composer('homepage._lastest_blog', function($view){
 */
 use App\Http\Controllers\Works;
 
+// ROUTE DETAIL WORK
+// PATTERN: /works/{work}/{slug}
+// CTRL: Works
+// ACTION: show
+Route::get('/works/{work}/{slug}', [Works::class, 'show'])->where(['work' => '[1-9][0-9]*',
+                                                                   'slug' => '[a-z0-9][a-z0-9\-]*'])
+                                                          ->name('works.show');
 
 // ROUTE DES WORKS
 // PATTERN: /works

@@ -16,6 +16,6 @@ class Work extends Model
 
     // Getter des tags du work
     public function tags(){
-      return $this->hasMany('App\Models\Tag', 'works_has_tags');
+      return $this->belongsToMany('App\Models\Tag', 'works_has_tags');
     }
 }

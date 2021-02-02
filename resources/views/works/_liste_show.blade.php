@@ -3,7 +3,7 @@
 --}}
 @foreach ($works as $work)
 
-  <div class="col-md-4 col-sm-6">
+  <div class="col-md-3 col-sm-6">
     <figure>
       <img src="{{ asset('assets/img/portfolio/' . $work->image ) }}" alt=" {{$work->image}} ">
       <figcaption>
@@ -13,5 +13,8 @@
       </figcaption>
     </figure>
   </div>
-  
+  {{-- @foreach ($work->tags as $tag)
+    {{dump($tag->id)}}
+  @endforeach --}}
+
 @endforeach

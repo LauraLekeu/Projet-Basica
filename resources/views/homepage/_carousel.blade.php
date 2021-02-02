@@ -21,7 +21,7 @@
                     <h2 class="animation animated-item-1">{{ $work->title  }}</h2>
                     <p class="animation animated-item-2">{{ $work->client->name  }}</p>
                     <br>
-                    <a class="btn btn-md animation animated-item-3" href="#">Learn More</a>
+                    <a class="btn btn-md animation animated-item-3" href="{{ route('works.show', ['work' => $work->id, 'slug' => Str::slug($work->title, '-')]) }}">Learn More</a>
                   </div>
                 </div>
               </div>
