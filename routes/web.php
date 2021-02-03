@@ -40,7 +40,13 @@ use App\Http\Controllers\Posts;
 // ACTION: index
 Route::get('/posts', [Posts::class, 'index'])->name('posts');
 
-
+// ROUTE DETAIL POST
+// PATTERN: /posts/{post}/{slug}
+// CTRL: Posts
+// ACTION: show
+Route::get('/posts/{post}/{slug}', [Posts::class, 'show'])->where(['post' => '[1-9][0-9]*',
+                                                                   'slug' => '[a-z0-9][a-z0-9\-]*'])
+                                                          ->name('posts.show');
 /*
 |--------------------------------------------------------------------------
 | ROUTES DES WORKS

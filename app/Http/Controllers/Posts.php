@@ -15,4 +15,10 @@ class Posts extends Controller
                                             ->paginate(4);
         return view('posts.index', compact('posts'));
       }
+
+
+    public function show($id){
+      $post = Post::find($id);
+      return view('posts.show', compact('post'));
+    }
 }
