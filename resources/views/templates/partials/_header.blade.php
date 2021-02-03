@@ -15,10 +15,10 @@
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="{{ route('home') }}">Home</a></li>
-                <li><a href="{{ route('works') }}">Portfolio</a></li>
-                <li><a href="{{ route('posts') }}">Blog</a></li>
-                <li><a href="{{ route('contact') }}">Contact</a></li>
+                <li class="{{ (\Request::route()->getName() == 'home') ? 'active' : '' }}"><a href="{{ route('home') }}">Home</a></li>
+                <li class="{{ (\Request::route()->getName() == 'works') ? 'active' : '' }}"><a href="{{ route('works') }}">Portfolio</a></li>
+                <li class="{{ (\Request::route()->getName() == 'posts') ? 'active' : '' }}"><a href="{{ route('posts') }}">Blog</a></li>
+                <li class="{{ (\Request::route()->getName() == 'contact') ? 'active' : '' }}"><a href="{{ route('contact') }}">Contact</a></li>
             </ul>
         </div>
     </div>
