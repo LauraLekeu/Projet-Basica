@@ -9,7 +9,7 @@
     <div class="row">
 
       <div class="col-footer col-md-4 col-xs-6">
-        <h3>Contact Us</h3>
+        <h3><a href="{{ route('contact') }}">Contact Us</a></h3>
         <p class="contact-us-details">
             <b>Address:</b> 123 Downtown Avenue, Manhattan, New York, United States of America<br/>
             <b>Phone:</b> +1 123 45678910<br/>

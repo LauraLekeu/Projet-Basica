@@ -82,6 +82,15 @@ Route::get('/', function () {
     return view('homepage.index');
 })->name('home');
 
+/*
+|--------------------------------------------------------------------------
+| ROUTE CONTACT
+|--------------------------------------------------------------------------
+*/
+
+Route::get('/contact', function () {
+    return view('contact.index');
+})->name('contact');
 
 
 /*
