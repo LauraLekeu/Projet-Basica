@@ -39,7 +39,7 @@
               <td class="h6">{{ $post->categorie->name }}</td>
               <td class="h6">
                 <a href="{{ route('admin.posts.edit.form', ['post' => $post->id])}}"><u>Edit</u></a> |
-                <a href="#" class="delete"><u>Delete</u></a>
+                <a href="{{ route('admin.posts.delete', ['post' => $post->id]) }}" class="delete"><u>Delete</u></a>
               </td>
             </tr>
           @endforeach

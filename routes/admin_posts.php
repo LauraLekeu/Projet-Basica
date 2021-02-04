@@ -9,6 +9,12 @@ use App\Http\Controllers\AdminPosts;
 |--------------------------------------------------------------------------
 */
 
+// ROUTE DELETE POST
+// PATTERN: /admin/posts/delete/{post}
+// CTRL: AdminPosts
+// ACTION: delete
+Route::get('/admin/posts/delete/{post}', [AdminPosts::class, 'delete'])->where(['post' => '[1-9][0-9]*'])->name('admin.posts.delete');
+
 
 // ROUTE AJOUT POST : update
 // PATTERN: /admin/posts/edit/update/{post}
