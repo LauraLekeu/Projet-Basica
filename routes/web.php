@@ -19,13 +19,15 @@ require __DIR__.'/works.php';
 
 require __DIR__.'/contact.php';
 
+require __DIR__.'/admin_posts.php';
+
 /*
 |--------------------------------------------------------------------------
 | ROUTES BACKOFFICE
 |--------------------------------------------------------------------------
 */
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return view('admin.dashboard.index');
 })->middleware(['auth'])->name('dashboard');
 
 
