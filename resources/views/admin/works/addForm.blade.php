@@ -16,7 +16,7 @@
   </div>
   <hr/>
 
-  <form action="#" method="post" enctype="multipart/form-data">
+  <form action="{{ route('admin.works.add.insert')}}" method="post" enctype="multipart/form-data">
     @csrf
 
     <div class="form-group row">
@@ -43,11 +43,11 @@
     <div class="form-group row">
     <label class="col-sm-2 col-form-label">Tags</label>
     <div class="col-sm-8">
-      <?php foreach ($tags as $tag): ?>
-         <input type="checkbox" name="'tags[]'" id="{{ $tag->name }}" value="{{ $tag->id }}">
+      @foreach ($tags as $tag)
+         <input type="checkbox" name="tags[]" id="{{ $tag->name }}" value="{{ $tag->id }}">
          <label for="{{ $tag->name }}"> {{ $tag->name }} </label>
          <br/>
-      <?php endforeach; ?>
+      @endforeach
     </div>
   </div>
 
@@ -63,14 +63,12 @@
       <label for="client" class="col-sm-2 col-form-label">Client</label>
       <div class="col-sm-8">
         <select name="client" id='client'>
-          <?php foreach ($clients as $client): ?>
+          @foreach ($clients as $client)
             <option value="{{ $client->id }}">{{ $client->name }}</option>
-          <?php endforeach; ?>
+          @endforeach
         </select>
       </div>
     </div>
-
-
 
     <input type="submit" value="Ajouter">
   </form>

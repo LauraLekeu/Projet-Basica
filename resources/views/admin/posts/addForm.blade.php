@@ -44,9 +44,9 @@
       <label for="categorie" class="col-sm-2 col-form-label">Catégorie</label>
       <div class="col-sm-8">
         <select name="categorie" id='categorie'>
-          <?php foreach ($categories as $categorie): ?>
+          @foreach ($categories as $categorie)
             <option value="{{ $categorie->id }}">{{ $categorie->name }}</option>
-          <?php endforeach; ?>
+          @endforeach
         </select>
       </div>
     </div>

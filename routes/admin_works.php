@@ -9,6 +9,13 @@ use App\Http\Controllers\AdminWorks;
 |--------------------------------------------------------------------------
 */
 
+// ROUTE AJOUT POST : Insert
+// PATTERN: /admin/posts/add/insert
+// CTRL: AdminPosts
+// ACTION: addInsert
+Route::post('/admin/works/add/insert', [AdminWorks::class, 'addInsert'])->name('admin.works.add.insert');
+
+
 // ROUTE AJOUT WORK : Formulaire
 // PATTERN: /admin/works/add/form
 // CTRL: AdminWorks
