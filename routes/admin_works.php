@@ -9,6 +9,13 @@ use App\Http\Controllers\AdminWorks;
 |--------------------------------------------------------------------------
 */
 
+// ROUTE DELETE WORKS
+// PATTERN: /admin/works/delete/{work}
+// CTRL: AdminWorks
+// ACTION: delete
+Route::get('/admin/works/delete/{work}', [AdminWorks::class, 'delete'])->where(['work' => '[1-9][0-9]*'])->name('admin.works.delete');
+
+
 // ROUTE MODIFICATION WORK : update
 // PATTERN: /admin/works/edit/update/{work}
 // CTRL: AdminWorks

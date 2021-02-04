@@ -81,4 +81,11 @@ class AdminWorks extends Controller
     }
 
 
+    public function delete(Work $work){
+      $work->tags()->detach();
+      $work->delete();
+      return redirect()->route('admin.works');
+    }
+
+
 }
