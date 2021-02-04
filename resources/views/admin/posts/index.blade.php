@@ -38,7 +38,7 @@
               <td class="h6 text-center"><img src="{{ asset('assets/img/blog/' . $post->image )}}" alt="" width="100"> </td>
               <td class="h6">{{ $post->categorie->name }}</td>
               <td class="h6">
-                <a href="#"><u>Edit</u></a> |
+                <a href="{{ route('admin.posts.edit.form', ['post' => $post->id])}}"><u>Edit</u></a> |
                 <a href="#" class="delete"><u>Delete</u></a>
               </td>
             </tr>

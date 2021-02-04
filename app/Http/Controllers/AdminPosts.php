@@ -44,6 +44,12 @@ class AdminPosts extends Controller
 
     }
 
+    public function editForm($id){
+        $post = Post::find($id);
+        $categories = \App\Models\Categorie::orderBy('name', 'asc')->get();
+        return view('admin.posts.editForm', compact('post', 'categories'));
+    }
+
 
 
 
