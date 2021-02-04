@@ -21,6 +21,8 @@ require __DIR__.'/contact.php';
 
 require __DIR__.'/admin_posts.php';
 
+require __DIR__.'/admin_works.php';
+
 /*
 |--------------------------------------------------------------------------
 | ROUTES BACKOFFICE

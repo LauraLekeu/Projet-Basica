@@ -19,18 +19,18 @@
       <ul class="nav navbar-nav">
         <li class="{{ (\Request::route()->getName() == 'dashboard') ? 'active' : '' }}"><a href="{{ route('dashboard') }}">Home</a></li>
         <li class="{{ (\Request::route()->getName() == 'admin.posts') ? 'active' : '' }}"><a href="{{ route('admin.posts') }}">Liste des posts</a></li>
-        <li class="{{ (\Request::route()->getName() == 'admin.works') ? 'active' : '' }}"><a href="#contact">Liste des works</a></li>
+        <li class="{{ (\Request::route()->getName() == 'admin.works') ? 'active' : '' }}"><a href="{{ route('admin.works') }}">Liste des works</a></li>
 
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gestion <span class="caret"></span></a>
           <ul class="dropdown-menu">
 
             <li class="dropdown-header h5">Posts</li>
-            <li><a href="#">Liste</a></li>
+            <li><a href="{{ route('admin.posts') }}">Liste</a></li>
             <li><a href="{{ route('admin.posts.add.form')}}">Ajouter</a></li>
             <li role="separator" class="divider"></li>
             <li class="dropdown-header h5">Works</li>
-            <li><a href="#">Liste</a></li>
+            <li><a href="{{ route('admin.works') }}">Liste</a></li>
             <li><a href="#">Ajouter</a></li>
         </ul>
         </li>
