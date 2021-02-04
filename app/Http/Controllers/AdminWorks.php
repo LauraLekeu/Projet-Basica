@@ -23,9 +23,8 @@ class AdminWorks extends Controller
         return view('admin.works.addForm', compact('works', 'tags', 'clients'));
     }
 
+
     public function addInsert(Request $request){
-
-
       $work = new Work;
 
       $work->title = $request->title;
@@ -52,7 +51,14 @@ class AdminWorks extends Controller
       $work->tags()->attach($request->tags);
 
       return redirect()->route('admin.works');
+    }
 
+
+    public function editForm($id){
+        $work = Work::find($id);
+        $tags = \App\Models\Tag::orderBy('name', 'asc')->get();
+        $clients = \App\Models\Client::orderBy('name', 'asc')->get();
+        return view('admin.works.editForm', compact('work', 'clients', 'tags'));
     }
 
 

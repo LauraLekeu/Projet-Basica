@@ -46,7 +46,7 @@
               <td class="h6">{{ $work->inSlider == 1 ? "Slide" : "|" }}</td>
               <td class="h6">{{ $work->client->name }}</td>
               <td class="h6">
-                <a href="#"><u>Edit</u></a> |
+                <a href="{{ route('admin.works.edit.form', ['work' => $work->id]) }}"><u>Edit</u></a> |
                 <a href="#" class="delete"><u>Delete</u></a>
               </td>
             </tr>
