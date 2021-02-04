@@ -1,5 +1,10 @@
 @extends('admin.templates.index')
 
+@section('title')
+ Home
+@endsection
+
+
 @section('content')
   <div class="jumbotron">
     <br/>

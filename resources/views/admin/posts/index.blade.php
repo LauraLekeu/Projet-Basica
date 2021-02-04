@@ -1,10 +1,15 @@
 @extends('admin.templates.index')
 
+@section('title')
+ Liste des posts
+@endsection
+
+
 @section('content')
 
   <div class="page-header">
     <h1>Liste des posts</h1>
-    <a  href="#">Ajouter un post</a>
+    <a  href="{{ route('admin.posts.add.form')}}">Ajouter un post</a>
   </div>
 
   <div class="row">

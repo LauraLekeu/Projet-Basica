@@ -12,7 +12,7 @@
 <meta name="author" content="">
 <link rel="icon" href="../../favicon.ico">
 
-<title>BACKOFFICE - @yield('title') </title>
+<title>Backoffice - @yield('title') </title>
 
 <!-- Bootstrap core CSS -->
 <!-- Font Awesome -->
