@@ -31,7 +31,7 @@
             <li role="separator" class="divider"></li>
             <li class="dropdown-header h5">Works</li>
             <li><a href="{{ route('admin.works') }}">Liste</a></li>
-            <li><a href="#">Ajouter</a></li>
+            <li><a href="{{ route('admin.works.add.form')}}">Ajouter</a></li>
         </ul>
         </li>
       </ul>

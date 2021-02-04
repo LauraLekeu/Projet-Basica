@@ -9,7 +9,7 @@
 
   <div class="page-header">
     <h1>Liste des works</h1>
-    <a  href="#">Ajouter un post</a>
+    <a  href="{{ route('admin.works.add.form')}}">Ajouter un work</a>
   </div>
 
   <div class="row">
@@ -25,6 +25,7 @@
             <th class="text-center h5">Image</th>
             <th class="text-center h5">Tags</th>
             <th class="text-center h5">In slider</th>
+            <th class="text-center h5">Clients</th>
             <th class="text-center h5">Action</th>
           </tr>
         </thead>
@@ -43,6 +44,7 @@
                 @endforeach
               </td>
               <td class="h6">{{ $work->inSlider == 1 ? "Slide" : "|" }}</td>
+              <td class="h6">{{ $work->client->name }}</td>
               <td class="h6">
                 <a href="#"><u>Edit</u></a> |
                 <a href="#" class="delete"><u>Delete</u></a>
