@@ -62,4 +62,23 @@ class AdminWorks extends Controller
     }
 
 
+    public function update(Work $work, Request $request){
+      $work->inSlider = 0;
+      $work->tags()->detach($request->tags);
+      $work->title = $request->title;
+      $work->content = $request->content;
+      $work->updated_at = NOW();
+      $work->client_id = $request->client;
+
+      if ($request->inSlider) {
+        $work->inSlider = 1;
+      }
+
+      $work->save();
+      $work->tags()->attach($request->tags);
+
+      return redirect()->route('admin.works');
+    }
+
+
 }

@@ -9,6 +9,13 @@ use App\Http\Controllers\AdminWorks;
 |--------------------------------------------------------------------------
 */
 
+// ROUTE MODIFICATION WORK : update
+// PATTERN: /admin/works/edit/update/{work}
+// CTRL: AdminWorks
+// ACTION: update
+Route::post('/admin/works/edit/update/{work}', [AdminWorks::class, 'update'])->where(['work' => '[1-9][0-9]*'])->name('admin.works.edit.update');
+
+
 // ROUTE MODIFICATION WORK : Formulaire
 // PATTERN: /admin/works/edit/form/{work}
 // CTRL: AdminWorks

@@ -11,13 +11,14 @@
     <br/>
     <br/>
     <h1>Modification du work</h1>
+      <p class="h4">N°{{ $work->id }} - {{ $work->title }}</p>
     <br />
     <div>
       <a href="{{ route('admin.works') }}">Retour vers la liste des works</a>
     </div>
     <hr/>
 
-    <form action="#" method="post" enctype="multipart/form-data">
+    <form action="{{ route('admin.works.edit.update', ['work' => $work->id]) }}" method="post" enctype="multipart/form-data">
       @csrf
 
       <div class="form-group row">
