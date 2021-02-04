@@ -26,7 +26,7 @@
           <ul class="dropdown-menu">
 
             <li class="dropdown-header h5">Posts</li>
-            <li><a href="#">Ajouter</a></li>
+            <li><a href="{{ route('admin.posts.add.form')}}">Ajouter</a></li>
             <li><a href="#">Modifier</a></li>
             <li><a href="#">Supprimer</a></li>
             <li role="separator" class="divider"></li>
@@ -34,7 +34,7 @@
             <li><a href="#">Ajouter</a></li>
             <li><a href="#">Modifier</a></li>
             <li><a href="#">Supprimer</a></li>
-            
+
           </ul>
         </li>
       </ul>

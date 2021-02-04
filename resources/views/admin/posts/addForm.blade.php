@@ -16,7 +16,7 @@
   </div>
   <hr/>
 
-  <form action="#" method="post">
+  <form action="{{ route('admin.posts.add.insert') }}" method="post" enctype="multipart/form-data">
     @csrf
 
     <div class="form-group row">
@@ -45,7 +45,7 @@
       <div class="col-sm-8">
         <select name="categorie" id='categorie'>
           <?php foreach ($categories as $categorie): ?>
-            <option value="<?php echo $categorie['id']; ?>"><?php echo $categorie['name']; ?></option>
+            <option value="{{ $categorie->id }}">{{ $categorie->name }}</option>
           <?php endforeach; ?>
         </select>
       </div>
