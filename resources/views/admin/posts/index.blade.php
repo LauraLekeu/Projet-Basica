@@ -29,13 +29,13 @@
         </thead>
         <tbody>
           @foreach ($posts as $post)
-            <tr>
+            <tr class="text-center">
               <td class="h6">{{ $post->id }}</td>
               <td class="h6">{{ $post->title }}</td>
               <td class="h6">{{ Illuminate\Support\Str::limit($post->content, 50)  }}</td>
               <td class="h6">{{ \Carbon\Carbon::parse($post->created_at)->format('d M, Y') }}</td>
-              <td class="h6">{{ \Carbon\Carbon::parse($post->updated_at)->format('d M, Y') }}</td>
-              <td class="h6 text-center"><img src="{{ asset('assets/img/blog/' . $post->image )}}" alt="" width="100"> </td>
+              <td class="h6">{{$post->updated_at ? \Carbon\Carbon::parse($post->updated_at)->format('d M, Y') : '|' }}</td>
+              <td class="h6"><img src="{{ asset('assets/img/blog/' . $post->image )}}" alt="" width="100"> </td>
               <td class="h6">{{ $post->categorie->name }}</td>
               <td class="h6">
                 <a href="{{ route('admin.posts.edit.form', ['post' => $post->id])}}"><u>Edit</u></a> |

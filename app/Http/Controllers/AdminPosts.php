@@ -28,6 +28,7 @@ class AdminPosts extends Controller
       $post->title = $request->title;
       $post->content = $request->content;
       $post->created_at = NOW();
+      $post->updated_at = null;
       $post->categorie_id = $request->categorie;
 
       if ($request->file('image')) {
@@ -48,6 +49,17 @@ class AdminPosts extends Controller
         $post = Post::find($id);
         $categories = \App\Models\Categorie::orderBy('name', 'asc')->get();
         return view('admin.posts.editForm', compact('post', 'categories'));
+    }
+
+    public function update(Post $post, Request $request){
+      $post->title = $request->title;
+      $post->content = $request->content;
+      $post->updated_at = NOW();
+      $post->categorie_id = $request->categorie;
+
+      $post->save();
+
+      return redirect()->route('admin.posts');
     }
 
 

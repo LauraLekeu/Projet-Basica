@@ -10,8 +10,15 @@ use App\Http\Controllers\AdminPosts;
 */
 
 
+// ROUTE AJOUT POST : update
+// PATTERN: /admin/posts/edit/update/{post}
+// CTRL: AdminPosts
+// ACTION: update
+Route::post('/admin/posts/edit/update/{post}', [AdminPosts::class, 'update'])->where(['post' => '[1-9][0-9]*'])->name('admin.posts.edit.update');
+
+
 // ROUTE MODIFICATION POST : Formulaire
-// PATTERN: /admin/posts/edit/form
+// PATTERN: /admin/posts/edit/form/{post}
 // CTRL: AdminPosts
 // ACTION: editForm
 Route::get('/admin/posts/edit/form/{post}', [AdminPosts::class, 'editForm'])->where(['post' => '[1-9][0-9]*'])->name('admin.posts.edit.form');
