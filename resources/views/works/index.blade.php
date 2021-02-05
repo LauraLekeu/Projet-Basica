@@ -8,21 +8,16 @@
   Works
 @endsection
 
+@section('banner')
+  Our Portfolio
+@endsection
+
+
 @section('scripts')
   <script src={{ asset('assets/js/works/index.js') }}></script>
 @endsection
 
 @section('content')
-
-  <div class="section section-breadcrumbs">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h1>Our Portfolio</h1>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <div class="section">
     <div class="container">

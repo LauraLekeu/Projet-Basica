@@ -8,22 +8,12 @@
   Works - {{ $work->title }}
 @endsection
 
-{{-- @section('scripts')
-  <script src={{ asset('assets/js/works/show.js') }}></script>
+@section('banner')
+  Product Details
 @endsection
 
- --}}
 
 @section('content')
-  <div class="section section-breadcrumbs">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h1>Product Details</h1>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <div class="section">
     <div class="container">

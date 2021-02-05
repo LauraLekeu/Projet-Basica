@@ -8,17 +8,12 @@
   Posts
 @endsection
 
+@section('banner')
+  Our Blog
+@endsection
+
 @section('content')
 
-  <div class="section section-breadcrumbs">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h1>Our Blog</h1>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <div class="section">
     <div class="container">

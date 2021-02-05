@@ -8,17 +8,11 @@
   Contact Us
 @endsection
 
-@section('content')
+@section('banner')
+  Contact Us
+@endsection
 
-  <div class="section section-breadcrumbs">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <h1>Contact Us</h1>
-        </div>
-      </div>
-    </div>
-  </div>
+@section('content')
 
   <div class="section section-map">
     <div class="col-sm-12" style="padding:0;">

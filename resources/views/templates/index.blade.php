@@ -10,6 +10,10 @@
   </head>
   <body>
     @include('templates.partials._header')
+    
+    @if(\Request::route()->getName() !== 'home')
+      @include('templates.partials._banner')
+    @endif
 
     @yield('content')
 
