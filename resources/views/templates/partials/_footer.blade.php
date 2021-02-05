@@ -6,6 +6,7 @@
 <div class="footer">
   <div class="container">
 
+
     <div class="row">
 
       <div class="col-footer col-md-4 col-xs-6">
@@ -31,11 +32,11 @@
         <h3>About Our Company</h3>
           <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci.</p>
       </div>
-
     </div>
+
     <div class="row">
       <div class="col-md-12">
-        <div class="footer-copyright">&copy; 2014 <a href="http://www.vactualart.com/portfolio-item/basica-a-free-html5-template/">Basica</a> Bootstrap HTML Template. By <a href="http://www.vactualart.com">Vactual Art</a>.</div>
+        <div class="footer-copyright">&copy; 2014 <a href="http://www.vactualart.com/portfolio-item/basica-a-free-html5-template/">Basica</a> Bootstrap HTML Template. By <a href="http://www.vactualart.com">Vactual Art</a>. |  <a href="{{ route('login') }}"> Administration</a></div>
       </div>
     </div>
   </div>
